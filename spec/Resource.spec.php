@@ -1,6 +1,5 @@
 <?php
 
-use Kahlan\Plugin\Double;
 use Tests\Utility\ResourceTester;
 use Tests\Utility\Reflection;
 use Yapstone\Request;
@@ -9,7 +8,6 @@ use Yapstone\Exceptions\InvalidParameters;
 describe('Resource', function () {
     context('Make request', function () {
         beforeEach(function () {
-            $this->request = Double::instance(['class' => Request::class]);
             allow(Request::class)
                 ->toReceive('send')
                 ->andReturn(true);

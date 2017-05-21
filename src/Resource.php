@@ -19,9 +19,7 @@ abstract class Resource implements ResourceInterface
         $name = self::className();
 
         $request = new Request();
-        $response = $request->send($name, $params);
-
-        return $response;
+        return $request->send($name, $params);
     }
 
     /**
